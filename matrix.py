@@ -11,8 +11,12 @@ def print_matrix( matrix ):
                 print ""
     print matrix
 
-def ident( matrix ):
-    pass
+#identity matrix
+def ident( matrix ): 
+    matrix[0][0] = 1
+    matrix[1][1] = 1
+    matrix[2][2] = 1
+    matrix[3][3] = 1
 
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
@@ -29,4 +33,10 @@ def new_matrix(rows = 4, cols = 4):
             m[r].append( 0 )
     return m
 
-print_matrix(new_matrix())
+
+m = new_matrix()
+print "original matrix: "
+print_matrix(m)
+ident(m)
+print "original matrix --> identity matrix: "
+print_matrix(m)
