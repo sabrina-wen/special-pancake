@@ -9,7 +9,6 @@ def print_matrix( matrix ):
             col = col+1
             if (col % len(matrix[0]) == 0):
                 print ""
-    print matrix
 
 #identity matrix
 def ident( matrix ): 
@@ -40,3 +39,6 @@ print_matrix(m)
 ident(m)
 print "original matrix --> identity matrix: "
 print_matrix(m)
+r = new_matrix(2,4)
+print "rand matrix"
+print_matrix(r)
