@@ -6,6 +6,30 @@ screen = new_screen()
 color = [ 255, 255, 0 ]
 matrix = new_matrix()
 
+m = new_matrix()
+print "original matrix: "
+print_matrix(m)
+ident(m)
+m[0][3] = 2
+m[1][3] = 3
+m[2][3] = 4
+print "original matrix --> identity matrix: "
+print_matrix(m)
+r = new_matrix(4,8)
+incr = 0
+for i in range(len(r)):
+    for j in range(len(r[0])):
+        if (i != len(r) - 1):
+            r[i][j] = incr
+            incr = incr + 1
+        else:
+            r[i][j] = 1
+print "m2 matrix:"
+print_matrix(r)
+
+print "multiply m1 x m2"
+print_matrix(matrix_mult(m,r))
+
 # lightning bolt
 add_edge(matrix, 250, 450, 0, 275, 400, 0) # top downward slash
 add_edge(matrix, 220, 400, 0, 275, 400, 0) # straight line
